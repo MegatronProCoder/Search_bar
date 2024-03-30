@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #202124;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.container{
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.logo{
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+.searchmenu{
+    max-width: 650px;
+    width: 100%;
+    position: relative;
+}
+.search-box ,
+.suggestion-box{
+    display: flex;
+    align-items: center;
+    border: 1px solid #5F6368;
+    padding-inline: 35px;
+    border-radius: 40px;
+    
+    width: 100%;
+    box-shadow: 0px 10px 4px 0px #1F2022;
+}
+
+.search-box:hover,
+.search-box:focus-within {
+    border: unset;
+    background-color: #303134; 
+}
+.search-box:focus-within{
+    border-radius:  24px 24px 0px 0px;
+    border-bottom: unset;
+}
+.seacrh-icon ,
+.suggestion img{
+    width: 20px;
+    margin-right: 16px; 
+}
+.cross-icon{
+    width: 16px;
+    display: none;
+}
+.search-box:focus-within .cross-icon{
+    display: unset;
+}
+.search-input{
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding-block: 16px;
+   
+    width: 100%;  
+    font-family: inherit;
+    font-size: 18px;
+}
+.line{
+    background-color: #5F6368;
+    height: 1px;
+}
+.search-box:focus-within + .suggestion-box{
+    display: unset;
+    background-color: #303134;
+    border-radius: 0px 0px 24px 24px;
+    border: unset;
+    box-shadow: none;
+}  
+.suggestion-box{
+    position: absolute;
+    display:none;
+    padding-bottom:16px ; 
+    
+}
+.suggestion{
+    display: flex;
+    align-items: center;
+    margin-block: 18px;
+}
+
